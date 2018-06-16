@@ -1,0 +1,44 @@
+{
+  "author": "Dead Pixels Collective",
+  "bugs": {
+    "url": "https://github.com/deathbeds/jupyterlab-keycaps/issues"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^0.16.0"
+  },
+  "description": "Shows the current keyboard shortcuts",
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "~2.9.2",
+    "prettier": "1.12.1",
+    "tslint": "^5.10.0"
+  },
+  "files": [
+    "{lib,style}/**/*.{css,d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/deathbeds/jupyterlab-keycaps",
+  "jupyterlab": {
+    "extension": "lib/plugin.js"
+  },
+  "keywords": ["jupyter", "jupyterlab", "jupyterlab-extension", "keyboard"],
+  "license": "BSD-3-Clause",
+  "main": "lib/index.js",
+  "name": "@deathbeds/jupyterlab-keycaps",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deathbeds/jupyterlab-keycaps.git"
+  },
+  "scripts": {
+    "bootstrap": "jlpm && jlpm build && jupyter labextension link .",
+    "build": "tsc",
+    "build:all": "jlpm build && jupyter labextension link .",
+    "clean": "rimraf lib",
+    "watch": "tsc -w",
+    "lint": "jlpm lint:prettier && jlpm lint:tslint",
+    "lint:tslint": "tslint --fix ./src/**/*.ts",
+    "lint:prettier": "prettier --write *.json *.md ./src/**/*.ts ./style/**/*.css"
+  },
+  "types": "lib/index.d.ts",
+  "version": "0.1.0"
+}

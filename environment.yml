@@ -1,0 +1,8 @@
+name: jupyterlab-keycaps-dev
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyterlab >=0.32,<0.33
+  - nodejs <10
+  - python >=3.6,<3.7

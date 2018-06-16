@@ -1,0 +1,59 @@
+.jp-KeyCapsIcon {
+  background-image: url("./img/keyboard.svg");
+  background-size: contain;
+}
+
+.jp-KeyCaps {
+  background-color: var(--jp-layout-color1);
+  color: var(--jp-ui-font-color1);
+  padding-left: var(--jp-ui-font-size1);
+  display: flex;
+  flex-direction: column;
+  --jp-keycaps-pad-small: calc(var(--jp-ui-font-size1) / 4);
+}
+
+.jp-KeyCaps-Toolbar {
+  flex: 0;
+  min-height: var(--jp-ui-font-size2);
+  background-color: var(--jp-layout-color1);
+  z-index: 1;
+}
+
+.jp-KeyCaps-Shortcuts {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.jp-KeyCaps-Shortcuts {
+  margin: 0;
+  padding: 0;
+}
+
+.jp-KeyCaps-Shortcuts li {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.jp-KeyCaps-Shortcuts li > * {
+  flex: 1;
+}
+
+.jp-KeyCaps-Shortcuts label {
+  padding: var(--jp-keycaps-pad-small);
+  font-size: var(--jp-ui-font-size0);
+}
+
+.jp-KeyCaps-Shortcuts li > div {
+  text-align: right;
+  height: calc(2.5 * var(--jp-ui-font-size1));
+}
+
+.jp-KeyCaps-Shortcuts kbd {
+  background-color: var(--jp-layout-color2);
+  border-radius: var(--jp-keycaps-pad-small);
+  margin-left: var(--jp-keycaps-pad-small);
+  padding: var(--jp-keycaps-pad-small);
+  padding-left: var(--jp-ui-font-size1);
+}

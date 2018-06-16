@@ -1,0 +1,27 @@
+name: jupyterlab-keycaps-dev
+
+commands:
+  dev:
+    unix: jlpm && jlpm build && jupyter labextension install --no-build .
+  lab:
+    unix: jupyter lab --no-browser --debug
+  lab:watch:
+    unix: jupyter lab --no-browser --debug --watch
+  lab:clean:
+    unix: jupyter lab clean
+  lab:build:
+    unix: jupyter lab build
+  watch:
+    unix: jlpm build --watch
+  jlpm:
+    unix: jlpm
+
+env_specs:
+  jupyterlab-keycaps-dev:
+    channels:
+      - conda-forge
+      - defaults
+    packages:
+      - jupyterlab >=0.32,<0.33
+      - nodejs <10
+      - python >=3.6,<3.7
