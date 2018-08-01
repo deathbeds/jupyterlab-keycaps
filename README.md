@@ -13,6 +13,12 @@ Shows the current keyboard shortcuts in JupyterLab
 jupyter labextension install @deathbeds/jupyterlab-keycaps
 ```
 
+## Usage
+
+From the _Command Palette_, run _View Keyboard Shortcuts_. As you switch
+between different views, you'll see the _Commands_ that currently have
+keyboard shortcuts.
+
 ## Development
 
 Do an initial build of the extension, link into JupyterLab and rebuild
